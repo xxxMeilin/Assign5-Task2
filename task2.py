@@ -52,6 +52,11 @@ def update():
     cur.close()
     conn.close()
 
+    info = read(student_number)
+    print("Updated student information:")
+    for row in info:
+        print(row)
+
 def delete():
     conn = connect()
     cur = conn.cursor()
